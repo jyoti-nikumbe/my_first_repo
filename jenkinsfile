@@ -5,9 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Place your build steps here
                     echo 'Building the application...'
-                    sh 'echo "Building the app..."'
                 }
             }
         }
@@ -15,9 +13,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    // Place your deploy steps here
                     echo 'Deploying the application...'
-                    sh 'echo "Deploying the app..."'
                 }
             }
         }
