@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    // Place your build steps here
+                    echo 'Building the application...'
+                    sh 'echo "Building the app..."'
+                }
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                script {
+                    // Place your deploy steps here
+                    echo 'Deploying the application...'
+                    sh 'echo "Deploying the app..."'
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline executed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
+}
