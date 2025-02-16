@@ -8,10 +8,8 @@ pipeline {
             steps {
                 script {
                     echo 'Building the application...'
-                    bat '''
-                        docker --version  // Check if Docker is available
-                        docker build -t %DOCKER_IMAGE% .
-                    '''
+                    bat docker --version
+                    bat docker build -t %DOCKER_IMAGE% .
                 }
             }
         }
