@@ -6,6 +6,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building the application...'
+                    .sh deploy.sh
                 }
             }
         }
