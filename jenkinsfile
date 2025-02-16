@@ -17,6 +17,7 @@ pipeline {
             steps {
                 script {
                     echo 'Deploying the application...'
+                    sh 'docker run -d --name my-python-container $DOCKER_IMAGE'
                 }
             }
         }
